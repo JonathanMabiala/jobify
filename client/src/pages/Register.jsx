@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { Form, redirect, useNavigation, Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/RegisterAndLoginPage";
 import { FormRow, Logo } from "../components";
+export const action = async (data) => {
+  console.log(data);
+  return null;
+};
 const Register = () => {
   return (
     <Wrapper className="">
-      <form className="form" action="">
+      <Form method="post" className="form" action="">
         <Logo />
         <h4>Register</h4>
         <div className="form-row">
@@ -33,7 +37,7 @@ const Register = () => {
             Login
           </Link>
         </p>
-      </form>
+      </Form>
     </Wrapper>
   );
 };
