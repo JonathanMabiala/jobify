@@ -1,0 +1,173 @@
+{
+    "info": {
+        "_postman_id": "4a924d01-3cc4-4633-98c1-137715495cb9",
+        "name": "Jobify Recording",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Job Routes",
+            "item": [
+                {
+                    "name": "Get All Jobs",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/jobs",
+                            "path": [
+                                "jobs"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Job",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{URL}}/jobs",
+                            "path": [
+                                "jobs"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"company\":\"code addict\",\n  \"position\": \"designer\",\n  \"jobStatus\": \"pending\",\n  \"jobType\": \"full-time\",\n  \"jobLocation\": \"florida\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Single Job",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/jobs/6534b6a9ba808b09bf44e7d2",
+                            "path": [
+                                "jobs",
+                                "6534b6a9ba808b09bf44e7d2"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Edit Job",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{URL}}/jobs/6531e83eb7e97866ff318977",
+                            "path": [
+                                "jobs",
+                                "6531e83eb7e97866ff318977"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\r\n  \"company\": \"coding addict\",\r\n  \"position\": \"front-end\",\r\n  \"jobStatus\": \"pending\",\r\n  \"jobType\": \"full-time\"\r\n  \r\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Job",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{URL}}/jobs/6531c0cfb6ccded24a0e192b",
+                            "path": [
+                                "jobs",
+                                "6531c0cfb6ccded24a0e192b"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Auth Routes",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{URL}}/auth/login",
+                            "path": [
+                                "auth",
+                                "login"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"sam@gmail.com\",\n  \"password\": \"secret123\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/auth/logout",
+                            "path": [
+                                "auth",
+                                "logout"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Logout User",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL}}/auth/logout",
+                            "path": [
+                                "auth",
+                                "logout"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "(Global Env)",
+    "dateExported": "2023-10-22T06:17:35.471Z",
+    "version": "1.0",
+    "global": true,
+    "variables": [
+        {
+            "name": "URL",
+            "value": "http://localhost:5100/api/v1"
+        }
+    ]
+}
