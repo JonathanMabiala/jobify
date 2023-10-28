@@ -15,7 +15,7 @@ const Navbar = () => {
         </button>
         <div className="">
           <Logo />
-          <h4 className="logo-text">dash</h4>
+          <h4 className="logo-text">Dashboard</h4>
         </div>
         <div className="btn-container">
           <ThemeToggle />

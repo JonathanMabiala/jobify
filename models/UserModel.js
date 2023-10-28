@@ -18,12 +18,14 @@ const UserSchema = new mongoose.Schema({
     enum: Object.values(ROLE),
     default: ROLE.USER,
   },
+  avatar: String,
+  avatarPublicId: String
 });
 
 UserSchema.methods.toJSON = function () {
   let obj = this.toObject();
   delete obj.password;
   return obj;
-}
+};
 
 export default mongoose.model("User", UserSchema);
